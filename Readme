@@ -1,0 +1,10 @@
+The Problem It Solves — Anchors the technical design in a real problem. Shows context for every architecture decision that follows.
+How It Works — Request Lifecycle — A 9-step numbered walkthrough of exactly what happens from the moment an incident arrives to when the analyst gets a response. This is the most important section for technical interviews — it shows you understand the system end to end.
+Architecture Diagram — Full ASCII diagram showing the Reasoning Controller's position in the stack, all surrounding components (MCP services, data layer, LLM endpoint, analyst dashboard), and which boundaries are public vs private.
+MCP Microservices — Dedicated section for each MCP service (Logs, Inventory, Threat Intel) with actual endpoint designs and what each returns. Shows the controlled API pattern in practice.
+AI Safety & Guardrails — Six named guardrails with implementation detail. This section alone signals serious product and engineering thinking around GenAI in a security context.
+API Design — Real JSON request and response examples including the full reasoning output schema with evidence chain and prioritized recommended actions.
+Deployment — Kubernetes config, environment variables, health check specs, and resilience patterns (retry, circuit breaker, fallback behavior).
+Performance, Metrics, Security Model — The sections that round it out as a production-grade component README rather than a conceptual overview.
+
+file:///Users/rganju/Downloads/oracle_reasoning_platform_demo.html
