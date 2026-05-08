@@ -12,7 +12,6 @@ Continuous contextual decision-making
 In this environment, identity becomes the control plane.
 
 Every AI action must answer:
-
 Who initiated the request?
 What permissions does the agent have?
 What data can the model access?
@@ -128,3 +127,50 @@ Life cycle example
 9. Response is returned to the user
 10. Full reasoning trace and telemetry are logged
 
+ARCHITECTURE
+Layer 1
+-Signal aggregation
+-SIEM, IAM, DLP, EDR, and cloud logs normalized into a unified incident stream.
+-SIEM
+-CrowdStrike
+-CASB
+-Audit
+
+Layer 2
+-Context engine
+-Deterministic context pull — user identity, device posture, data sensitivity, activity patterns.
+-IAM
+-MDM
+-Data catalog
+-Activity logs
+Layer 3
+Reasoning engine
+-LLM + RAG evaluates enriched context and produces structured risk output — score, summary, reasoning.
+-LLM
+RAG
+-MITRE ATT&CK
+-Structured output
+
+Layer 4
+-Execution layer
+-Connected to IAM and DLP for action execution — block access, trigger alerts, enforce policies.
+-IAM
+-DLP API
+-Playbooks
+-SOAR
+
+Layer 5
+-Audit + GRC layer
+-Every decision, recommendation, and action logged. Compliance teams can trace the full decision chain.
+-Decision log
+-Explainability
+-GRC export
+-SOC 2
+
+-Layer 6
+-Safety + guardrails
+-RBAC, scoped tool access, confidence scoring, and human-in-loop for high-risk decisions.
+RBAC
+-Confidence score
+-Human-in-loop
+-Rollback
