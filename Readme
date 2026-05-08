@@ -1,3 +1,27 @@
+Why Identity-Centric AI Matters
+
+Traditional security models focus on network boundaries and static application access. AI-native systems introduce:
+
+Autonomous AI agents
+Dynamic reasoning chains
+Tool calling and API execution
+Multi-model interactions
+Agent-to-agent communications
+Continuous contextual decision-making
+
+In this environment, identity becomes the control plane.
+
+Every AI action must answer:
+
+Who initiated the request?
+What permissions does the agent have?
+What data can the model access?
+Which tools can be executed?
+What policies govern the reasoning flow?
+Was the output compliant and auditable?
+
+AI Reasoning Controller addresses these challenges by embedding identity, authorization, governance, and observability directly into the AI execution lifecycle.
+
 # AI-Driven SOC Investigation Controller
 
 Detection is not enough. Decisions are what matter.
@@ -92,5 +116,15 @@ Trigger → Context → Correlation → Reasoning → Decision → Execution →
 This is not a model.
 
 It is a **structured decision system for security operations**, where AI is only one layer inside a controlled workflow.
+Life cycle example 
+1. User authenticates through enterprise identity provider
+2. AI request is submitted to the controller
+3. Identity and authorization policies are evaluated
+4. Prompt guardrails inspect the request
+5. Multi-agent orchestration engine selects workflows
+6. Tool/API access is validated against policies
+7. LLM executes reasoning tasks
+8. Output validation checks for policy compliance
+9. Response is returned to the user
+10. Full reasoning trace and telemetry are logged
 
-file:///Users/rganju/Downloads/oracle_reasoning_platform_demo.html
